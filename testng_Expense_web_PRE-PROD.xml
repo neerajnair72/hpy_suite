@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suites Run on Pre-Production[OUP Org]"
+	parallel="methods" thread-count="1">
+
+	<listeners>
+		<listener class-name="frameworkListeners.TestListeners" />
+		<listener class-name="frameworkListeners.AnnotationTransformer" />
+	</listeners>
+	
+	<suite-files>
+     		
+     		<!--  <suite-file path="src/test/resources/Testng_ExecFiles/testngTRFtoTRAVEL.xml" />  -->
+     		
+     		
+     <!--		<suite-file path="src/test/resources/Testng_ExecFiles/testngTravel.xml" />   -->
+ 
+  
+  	<!--  <suite-file path="src/test/resources/Testng_ExecFiles/testngAutomationOrg.xml" />  -->
+		
+ 		<suite-file path="src/test/resources/Testng_ExecFiles/testngOUPOrg.xml" />  
+ 			
+		<!-- <suite-file path="src/test/resources/Testng_ExecFiles/testngPWCChrome.xml" />   -->
+		
+		
+		
+	</suite-files>
+	</suite> 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Travel FLight Module" parallel="tests" thread-count="2">
+
+	<listeners>
+		<listener class-name="frameworkListeners.TestListeners" />
+		<listener class-name="frameworkListeners.AnnotationTransformer" />
+	</listeners>
+	
+	<test thread-count="1"
+		name="TravelNewChrome">
+		<parameter name="browser" value="chrome" />
+		<parameter name="env" value="https://corp-travel.uat.happay.in" />
+		<classes>
+		<!-- <class name="testCases.TravelNewSmokeTestCases.LandingScreenTests"></class>  		
+		<class name="testCases.TravelNewSmokeTestCases.TripCreationTests"></class>
+		<class name="testCases.TravelNewSmokeTestCases.BookingEngineTests"></class> 	 --> 
+		
+		<class name="testCases.TravelNewSmokeTestCases.BookingEngineHotelTests"></class> 
+    	<class name="testCases.TravelNewSmokeTestCases.BookingEngineTrainTests"></class> 
+		<class name="testCases.TravelNewSmokeTestCases.BookingEngineCabTests"></class>  
+		<class name="testCases.TravelNewSmokeTestCases.BookingEngineBusTests"></class>  			
+		</classes>
+	</test>
+	
+</suite>
+
+
+
+
+

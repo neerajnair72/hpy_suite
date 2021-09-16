@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MoneyRequests Module" thread-count="1">
+
+	<listeners>
+		<listener class-name="frameworkListeners.TestListeners" />
+		<listener class-name="frameworkListeners.AnnotationTransformer" />
+	</listeners>
+
+
+      <!--    <test name="OUP_MoneyRequest_Firefox" parallel="methods" thread-count="3">
+            <parameter name="browser" value="firefox" />
+            <parameter name="env" value="https://expense.uat.happay.in" />
+            <classes>
+                <class name="testCases.MoneyRequest.MoneyRequestCreateOUP">
+                    <methods>
+                        <include name="TC001_MoneyrequestWithoutMandatoryfields" />
+                        <include name="TC002_MoneyrequestHavingNoapprover" />
+                        <include name="TC003_CreateMoneyrequestAndCaptureMrID" />
+                        <include name="TC004_ApproveMoneyrequest" />
+                        <include name="TC005_VerifyMoneyrequest" />
+                        <include name="TC006_CreateMoneyrequestWithBill" />
+                        <include name="TC007_PartApproveMoneyrequest" />
+                        <include name="TC008_PartVerifyMoneyrequest" />
+                        <include name="TC009_MoneyrequestFromHome" />
+                        <include name="TC010_DeclineMoneyrequestManager" />
+                        <include name="TC011_MoneyrequestFromHome" />
+                        <include name="TC012_ApproveMoneyrequest" />
+                        <include name="TC013_DeclineMoneyrequestFinance" />
+                        <include name="TC014_MRExport" />
+                        <include name="TC015_MRExportWorkflowComments" />
+
+                    </methods>
+                </class>
+            </classes>
+        </test> -->
+        <!--  -->
+
+	<test name="OUP_MoneyRequest_Chrome"  parallel="methods" thread-count="1">
+		<parameter name="browser" value="chrome" />
+		<parameter name="env" value="https://expense.uat.happay.in" />
+		<classes>
+			<class name="testCases.MoneyRequest.MoneyRequestCreateOUP">
+				<methods>
+					<include name="TC001_MoneyrequestWithoutMandatoryfields" />
+					<!-- <include name="TC002_MoneyrequestHavingNoapprover" />
+					<include name="TC003_CreateMoneyrequestAndCaptureMrID"/>
+				    <include name="TC004_ApproveMoneyrequest" />
+					<include name="TC005_VerifyMoneyrequest" />
+					<include name="TC006_CreateMoneyrequestWithBill" />
+					<include name="TC007_PartApproveMoneyrequest" />
+					<include name="TC008_PartVerifyMoneyrequest" />
+					<include name="TC009_MoneyrequestFromHome" />
+					<include name="TC010_DeclineMoneyrequestManager" />
+					<include name="TC011_MoneyrequestFromHome" />
+					<include name="TC012_ApproveMoneyrequest" />
+					<include name="TC013_DeclineMoneyrequestFinance" />
+					<include name="TC014_MRExport" />
+					<include name="TC015_MRExportWorkflowComments" />
+					<include name="TC016_MRPDFDownloadWithInvoices"/>
+					<include name="TC017_MRPDFDownloadWithoutInvoices"/>
+					<include name="TC018_MRPDFDownloadWithInvoicesByManager"/>
+					<include name="TC019_MRPDFDownloadWithoutInvoicesByManager"/>
+					<include name="TC020_MRPDFDownloadVisibilityCheckByManager"/>
+					<include name="TC021_ResubmitMRDeclinedByManager"/>
+					<include name="TC022_ResubmitMRDeclinedByFinance"/>
+					<include name="TC023_recallbuttonCheckForVerifiedMR"/>
+					<include name="TC024_resubmitRecalledMR"/>
+					<include name="TC025_recallAndResubmitApproveddMR"/>
+					<include name="TC026_requestedAmountEditByFinance"/> -->
+					
+				</methods>
+			</class>
+
+		</classes>
+	</test>
+
+
+</suite><!-- HATWebFramework Automation Test Suites -->
+

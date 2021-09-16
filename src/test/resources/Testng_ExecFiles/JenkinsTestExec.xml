@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suites Run on Production[Automation Org]"
+	parallel="methods" thread-count="1">
+	<!-- <suite name="HATWebFramework Automation Test Suites"> -->
+
+	<listeners>
+		<listener class-name="frameworkListeners.TestListeners" />
+		<listener class-name="frameworkListeners.AnnotationTransformer"/>
+	</listeners>
+
+
+	<test thread-count="1"
+		name="expense">
+		<parameter name="browser" value="chrome" />
+		<parameter name="env" value="http://expense.happay.in" />
+
+
+
+		<classes>
+			<class name="testCases.Expense.CreateExpenseTest" />
+			</classes>
+			</test>
+			
+			<test name="reports">
+			<parameter name="browser" value="chrome" />
+		<parameter name="env" value="http://expense.happay.in" />
+			<classes>
+			<class name="testCases.Reports.ReportsModuleTestsOUP" />
+			<class name="testCases.Reports.ReportsModuleTest_PWC"/>
+			</classes>
+			</test>
+			
+				<test thread-count="1"
+		name="Expense">
+		<parameter name="browser" value="chrome" />
+  	    <parameter name="env" value="https://expense-prep.happay.in" />
+ 	    
+<!--  	     <parameter name="env" value="http://v2-new-ui.s3-website-ap-southeast-1.amazonaws.com" />
+ -->
+		<classes>
+		 <class name="testCases.Expense.CreateExpenseTestOUP"/>
+
+		 </classes>
+
+         </test>
+		 
+		 		<test thread-count="1"
+		name="Expense">
+		<parameter name="browser" value="chrome" />
+  	    <parameter name="env" value="https://expense-prep.happay.in" />
+ 	    
+<!--  	     <parameter name="env" value="http://v2-new-ui.s3-website-ap-southeast-1.amazonaws.com" />
+ -->
+		<classes>
+		 <class name="testCases.Expense.CreateExpenseTest_PWC"/>
+
+		 </classes>
+
+         </test>
+		 
+		 
+		 <test name="Reports">
+		 <parameter name="browser" value="chrome" />
+  	    <parameter name="env" value="https://expense-prep.happay.in" />
+		<classes>
+		<class name="testCases.Reports.ReportsModuleTestsOUP"/>
+		</classes>
+		 </test>
+		 
+		  
+		 <test name="Reports">
+		 <parameter name="browser" value="chrome" />
+  	    <parameter name="env" value="https://expense-prep.happay.in" />
+		<classes>
+		<class name="testCases.Reports.ReportsModuleTest_PWC"/>
+		</classes>
+		 </test>
+		 
+		 
+		 <test name="MoneyRequest">
+		 <parameter name="browser" value="chrome" />
+  	    <parameter name="env" value="https://expense-prep.happay.in" />
+		<classes>
+		<class name="testCases.MoneyRequest.MoneyRequestCreateOUP"/>
+		</classes>
+		 </test>
+		 
+		  <test name="TRF">
+		 <parameter name="browser" value="chrome" />
+  	    <parameter name="env" value="https://expense-prep.happay.in" />
+		<classes>
+		<class name="testCases.TRF.TRF_TestcasesOUP"/>
+		</classes>
+		 </test>
+		 
+		 
+
+		 
+		 
+		 <test name="Vendor_creation">
+		  <parameter name="browser" value="chrome" />
+          <parameter name="env" value="https://invoice.happay.in/" />  
+  		  <classes>
+   		   <class name="testCases.VendorPaymentsTestCases.Vendor.CreateVendorTest"/>
+   		 </classes> 
+		</test>
+		<test name ="SmokeTestcases">
+			<parameter name="browser" value="chrome" />
+			<parameter name="env" value="https://travel-uat.happay.in" />  
+			 <classes>
+     		    <class name="testCases.TravelTestCases.Travel_SmokeTestCases"/> 
+				</classes>
+				</test>
+		<test name="RegressionTestcases">
+		<parameter name="browser" value="chrome" />
+			<parameter name="env" value="https://travel-uat.happay.in" />
+			<classes>
+			<class name="testCases.TravelTestCases.Travel_EndToEndTestCases"/> 
+			</classes>
+			</test>
+			
+		 
+		 
+		 
+		 
+		 
+
+</suite> <!-- HATWebFramework Automation Test Suites -->

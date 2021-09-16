@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="methods" name="Failed suite [TRF Module]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="frameworkListeners.TestListeners"/>
+    <listener class-name="frameworkListeners.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="1" parallel="methods" name="OUP_TRF_Firefox(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="env" value="https://expense.uat.happay.in"/>
+    <classes>
+      <class name="testCases.TRF.TRF_TestcasesOUP">
+        <methods>
+          <include name="Test006_SaveTRF"/>
+          <include name="Test002_TRFVerifyPendingList"/>
+          <include name="globalTearDown"/>
+          <include name="Test005_TripDelete"/>
+          <include name="Test006_SubmitTRF"/>
+          <include name="globalTestSetup"/>
+          <include name="Test004_TripEdit"/>
+          <include name="Test015_TRFExport"/>
+          <include name="Test001_TRFCreation"/>
+          <include name="Test012_TRFDelete"/>
+          <include name="terminate"/>
+          <include name="Test016_downloadPolicyException"/>
+          <include name="Test017_downloadWorkflowComments"/>
+        </methods>
+      </class> <!-- testCases.TRF.TRF_TestcasesOUP -->
+    </classes>
+  </test> <!-- OUP_TRF_Firefox(failed) -->
+</suite> <!-- Failed suite [TRF Module] -->

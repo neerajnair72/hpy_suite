@@ -1,0 +1,49 @@
+pipeline {
+    // agent {
+    //         label 'docker'
+    //     }
+    agent any
+    options{
+        timestamps()
+    }
+        tools{
+            maven 'maven'
+        }
+    stages {
+        stage('Build Jar') {
+            steps {
+                dir("${WORKSPACE}/HAT-WebFramework"){
+                    timestamps{
+                    sh 'mvn clean package -DskipTests'
+                }
+                }
+            }
+        }
+        stage('Build Image') {
+            steps {
+                dir("${WORKSPACE}/HAT-WebFramework"){
+                    script {
+                        timestamps{
+                        app = docker.build("testbots/webtests")
+                    }
+                    }
+                }
+            }
+        }
+        stage('Push Image') {
+            steps {
+                script {
+                    docker.withRegistry('', 'dockerhub_testbot') {
+                        app.push("${BUILD_TAG}")
+                        app.push("latest")
+                    }
+                }
+            }
+        }        
+    }
+    post('Clean dir'){
+       cleanup{
+            deleteDir()
+        }
+    }
+}

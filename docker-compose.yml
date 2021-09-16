@@ -1,0 +1,47 @@
+# To execute this docker-compose yml file use `docker-compose -f <file_name> up`
+# Add the `-d` flag at the end for detached execution
+version: "3.5"
+
+networks:
+  hatwebtests:
+    name: hatwebtests
+    driver: bridge
+
+services:
+  selenium-hub:
+    image: selenium/hub:3.141.59
+    container_name: selenium-hub
+    ports:
+      - "4444:4444"
+    environment:
+      - GRID_MAX_SESSION=12
+    networks:
+      - hatwebtests
+
+  chrome:
+    image: selenium/node-chrome:3.141.59
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    privileged: true
+    environment:
+      - HUB_HOST=selenium-hub
+      - NODE_MAX_INSTANCES=2
+      - NODE_MAX_SESSION=6
+    networks:
+      - hatwebtests
+
+  firefox:
+    image: selenium/node-firefox:3.141.59
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    privileged: true
+    environment:
+      - HUB_HOST=selenium-hub
+      - NODE_MAX_INSTANCES=2
+      - NODE_MAX_SESSION=6
+    networks:
+      - hatwebtests

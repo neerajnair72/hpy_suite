@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Transactions Module-PWC" thread-count="1" >
+
+	<listeners>
+		<listener class-name="frameworkListeners.TestListeners" />
+		<listener class-name="frameworkListeners.AnnotationTransformer" />
+	</listeners>
+
+	<test name="PWC_Expense_Chrome" parallel="methods" thread-count="3">
+		<parameter name="browser" value="chrome" />
+		<parameter name="env" value="https://expense-prep.happay.in" />
+		<classes>
+			<class name="testCases.Expense.CreateExpenseTest_PWC">
+				<methods>
+					<include name="Test001_Expense_createExpense_Category_AirfareExpense" />
+					<include name="Test002_Expense_createExpense_Category_BOOKS_AND_PERIODICALS" />
+					<include name="Test003_Expense_createExpense_Category_COMMUNICATION" />
+					<include name="Test004_Expense_createExpense_Category_CONTINUING_EDUCATION" />
+					<include name="Test005_Expense_createExpense_Category_CONVEYANCE" />
+					<include name="Test006_Expense_createExpense_Category_COURIER_POSTAGE" />
+					<include name="Test007_Expense_createExpense_Category_EMPLOYEE_INITIATIVES" />
+					<include name="Test008_Expense_createExpense_Category_EQUIPMENT_HIRE_CHARGES" />
+					<include name="Test009_Expense_createExpense_Category_EVENT_EXPENSES" />
+					<include name="Test010_Expense_createExpense_Category_EXECUTIVE_HEALTH_CHECKUP" />
+					<include name="Test011_Expense_createExpense_Category_FEES_RATES_AND_TAXES" />
+					<include name="Test012_Expense_createExpense_Category_GIFTS_PRESENTS" />
+					<include name="Test013_Expense_createExpense_Category_GUEST_HOUSE_EXPENSES" />
+					<include name="Test014_Expense_createExpense_Category_HOTEL_BOOKING_EXPENSE" />
+					<include name="Test015_Expense_createExpense_Category_INCIDENTAL_EXPENSES_PER_DIEM" />
+					<include name="Test016_Expense_createExpense_Category_MEALS_AND_REFRESHMENTS" />
+					<include name="Test017_Expense_createExpense_Category_MEMBERSHIP_AND_SUBSCRIPTION" />
+					<include name="Test018_Expense_createExpense_Category_PARTICIPATION_FEES" />
+					<include name="Test019_Expense_createExpense_Category_PRINTING_AND_STATIONERY" />
+					<include name="Test020_Expense_createExpense_Category_PROPOSAL_EXPENSES" />
+					<include name="Test021_Expense_createExpense_Category_RELOCATION_CHARGES" />
+					<include name="Test022_Expense_createExpense_Category_TRAIN_AND_BUS_FARE" />
+					<include name="Test023_Expense_createExpense_Category_TRAVEL_INSURANCE" />
+					<include name="Test024_Expense_createExpense_Category_VEHICLE_EXPENSES_PARTNERS" />
+					<include name="Test025_Expense_createExpense_Category_VISA" />
+					<include name="Test026_Expense_createExpenseWithProject" />
+					<include name="Test027_Expense_createExpense_Verify_pending_list" />
+					<include name="Test028_Expense_Edit" />
+					<include name="Test029_Expense_CreateExpenseMissingAmountFields" />
+					<include name="Test030_Expense_createExpenseMissingSpentAtField" />
+					<include name="Test031_Expense_createExpenseMissingCityField" />
+					<include name="Test032_Expense_WithoutProject" />
+					<include name="Test033_Expense_Split" />
+					<include name="Test034_Expense_DeleteFromHamburger" />
+					<include name="Test035_Expense_DeleteFromQuickView" />
+					<include name="TC036_Expense_ExportExpense" />
+					<include name="TC037_Expense_DeleteBill" />
+					<include name="TC038_Expense_CopyExpensewithoutAmount" />
+					<include name="TC039_Expense_CopyExpense" />
+					<include name="TC040_Expense_ViewExpense" />
+					<include name="TC041_Expense_EditExpenseWithoutSpentAt" />
+					<include name="TC042_Expense_EditExpenseWithoutCity" />
+					<include name="TC043_Expense_EditExpenseWithoutBillNumber" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="PWC_Expense_Firefox" parallel="methods" thread-count="3">
+		<parameter name="browser" value="Firefox" />
+		<parameter name="env" value="https://expense-prep.happay.in" />
+		<classes>
+			<class name="testCases.Expense.CreateExpenseTest_PWC">
+				<methods>
+					<include name="Test001_Expense_createExpense_Category_AirfareExpense" />
+					<include name="Test002_Expense_createExpense_Category_BOOKS_AND_PERIODICALS" />
+					<include name="Test003_Expense_createExpense_Category_COMMUNICATION" />
+					<include name="Test004_Expense_createExpense_Category_CONTINUING_EDUCATION" />
+					<include name="Test005_Expense_createExpense_Category_CONVEYANCE" />
+					<include name="Test006_Expense_createExpense_Category_COURIER_POSTAGE" />
+					<include name="Test007_Expense_createExpense_Category_EMPLOYEE_INITIATIVES" />
+					<include name="Test008_Expense_createExpense_Category_EQUIPMENT_HIRE_CHARGES" />
+					<include name="Test009_Expense_createExpense_Category_EVENT_EXPENSES" />
+					<include name="Test010_Expense_createExpense_Category_EXECUTIVE_HEALTH_CHECKUP" />
+					<include name="Test011_Expense_createExpense_Category_FEES_RATES_AND_TAXES" />
+					<include name="Test012_Expense_createExpense_Category_GIFTS_PRESENTS" />
+					<include name="Test013_Expense_createExpense_Category_GUEST_HOUSE_EXPENSES" />
+					<include name="Test014_Expense_createExpense_Category_HOTEL_BOOKING_EXPENSE" />
+					<include name="Test015_Expense_createExpense_Category_INCIDENTAL_EXPENSES_PER_DIEM" />
+					<include name="Test016_Expense_createExpense_Category_MEALS_AND_REFRESHMENTS" />
+					<include name="Test017_Expense_createExpense_Category_MEMBERSHIP_AND_SUBSCRIPTION" />
+					<include name="Test018_Expense_createExpense_Category_PARTICIPATION_FEES" />
+					<include name="Test019_Expense_createExpense_Category_PRINTING_AND_STATIONERY" />
+					<include name="Test020_Expense_createExpense_Category_PROPOSAL_EXPENSES" />
+					<include name="Test021_Expense_createExpense_Category_RELOCATION_CHARGES" />
+					<include name="Test022_Expense_createExpense_Category_TRAIN_AND_BUS_FARE" />
+					<include name="Test023_Expense_createExpense_Category_TRAVEL_INSURANCE" />
+					<include name="Test024_Expense_createExpense_Category_VEHICLE_EXPENSES_PARTNERS" />
+					<include name="Test025_Expense_createExpense_Category_VISA" />
+					<include name="Test026_Expense_createExpenseWithProject" />
+					<include name="Test027_Expense_createExpense_Verify_pending_list" />
+					<include name="Test028_Expense_Edit" />
+					<include name="Test029_Expense_CreateExpenseMissingAmountFields" />
+					<include name="Test030_Expense_createExpenseMissingSpentAtField" />
+					<include name="Test031_Expense_createExpenseMissingCityField" />
+					<include name="Test032_Expense_WithoutProject" />
+					<include name="Test033_Expense_Split" />
+					<include name="Test034_Expense_DeleteFromHamburger" />
+					<include name="Test035_Expense_DeleteFromQuickView" />
+					<include name="TC036_Expense_ExportExpense" />
+					<include name="TC037_Expense_DeleteBill" />
+					<include name="TC038_Expense_CopyExpensewithoutAmount" />
+					<include name="TC039_Expense_CopyExpense" />
+					<include name="TC040_Expense_ViewExpense" />
+					<include name="TC041_Expense_EditExpenseWithoutSpentAt" />
+					<include name="TC042_Expense_EditExpenseWithoutCity" />
+					<include name="TC043_Expense_EditExpenseWithoutBillNumber" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+  
+   <!--  <test name="Automation_MergeExpense_Chrome" parallel="methods" thread-count="6">
+	<parameter name="browser" value="chrome" />
+	<parameter name="env" value="https://expense.happay.in" />
+	<classes>
+		<class name="testCases.Expense.MergeExpenseAutomationOrg">
+			<methods>
+			    <include name="TC001_Expense_createExpenseformergeDeposit" />
+				<include name="TC002_Expense_createExpenseformergeCab" />
+				<include name="TC003_Expense_AutoMergeExpenseIconinExpenseList" />
+			    <include name="TC004_Expense_VerfiyAutoMergeExpenseDetailsBills"/>
+				<include name="TC005_Expense_VerfiyAutoMergeExpenseDetails"/>
+				<include name="TC006_Expense_UnMerge"/>
+				<include name="TC007_Expense_VerifyBillsAfterUnMerge"/> 
+				<include name="TC008_Expense_MergeExpenseIconinExpenseList"/>
+				<include name="TC009_Expense_MergeExpenseIconinHamburger"/>
+				<include name="TC010_Expense_MergeExpenseWithoutSelectingMergableTransaction"/>
+			    <include name="TC011_Expense_MergeExpense"/>
+				<include name="TC012_Expense_VerfiyMergeExpenseDetails" />
+				<include name="TC013_Expense_VerfiyMergeExpenseDetailsBills" />
+				<include name="TC014_Expense_EditMergeExpenseDetails" />
+				<include name="TC015_Expense_createExpenseformerge" />
+				<include name="TC016_Expense_VerfiyAutoMergeExpenseDetails" />
+				<include name="TC017_Expense_MergeExpensemorethanTwoTransactions" />
+				<include name="TC018_Expense_DeleteFromHamburger" />  
+				
+
+			</methods>
+		</class>
+	</classes>
+	</test> -->
+
+  
+ 
+
+
+
+
+</suite> <!-- HATWebFramework Automation Test Suites -->
+

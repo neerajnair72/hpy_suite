@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: software.amazon.awssdk:metrics-spi:2.13.56">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/software/amazon/awssdk/metrics-spi/2.13.56/metrics-spi-2.13.56.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/software/amazon/awssdk/metrics-spi/2.13.56/metrics-spi-2.13.56-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/software/amazon/awssdk/metrics-spi/2.13.56/metrics-spi-2.13.56-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

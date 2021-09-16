@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Reports Module-OUP]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="frameworkListeners.TestListeners"/>
+    <listener class-name="frameworkListeners.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="5" parallel="methods" name="OUP_Report_Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="env" value="https://expense.uat.happay.in"/>
+    <classes>
+      <class name="testCases.Reports.ReportsModuleTestsOUP">
+        <methods>
+          <include name="TC003_createReport_Add_ExistingExpense"/>
+          <include name="TC021_downloadWorkflowComments"/>
+          <include name="TC004_createReport_AddNewExpense"/>
+          <include name="TC007_addEditExpenseInReport"/>
+          <include name="TC016_AcceptHardcopyFinance_Report"/>
+          <include name="TC023_RecallReport"/>
+          <include name="TC014_AcceptActionManager_Report"/>
+          <include name="globalTearDown"/>
+          <include name="TC006_DeleteBillExpenseInsideReport"/>
+          <include name="Preconditions"/>
+          <include name="globalTestSetup"/>
+          <include name="TC005_AddBillExpenseInsideReport"/>
+          <include name="TC017_AcceptActionFinance_Report"/>
+          <include name="TC018_viewNonViolatedReport"/>
+          <include name="TC008_EditReportRemoveExpense"/>
+          <include name="TC002_createReport"/>
+          <include name="terminate"/>
+          <include name="TC020_downloadPolicyException"/>
+          <include name="TC019_downloadExcel"/>
+          <include name="TC022_DeleteReportQuickView"/>
+        </methods>
+      </class> <!-- testCases.Reports.ReportsModuleTestsOUP -->
+    </classes>
+  </test> <!-- OUP_Report_Chrome(failed) -->
+</suite> <!-- Failed suite [Reports Module-OUP] -->

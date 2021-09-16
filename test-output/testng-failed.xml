@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Transactions Module-OUP]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="frameworkListeners.TestListeners"/>
+    <listener class-name="frameworkListeners.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="5" name="OUP_Expense_Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="env" value="https://expense.uat.happay.in"/>
+    <classes>
+      <class name="testCases.Expense.CreateExpenseTestOUP">
+        <methods>
+          <include name="terminate"/>
+          <include name="globalTearDown"/>
+          <include name="TC011_ExportExpense"/>
+          <include name="globalTestSetup"/>
+        </methods>
+      </class> <!-- testCases.Expense.CreateExpenseTestOUP -->
+    </classes>
+  </test> <!-- OUP_Expense_Chrome(failed) -->
+</suite> <!-- Failed suite [Transactions Module-OUP] -->

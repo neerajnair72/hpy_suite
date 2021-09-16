@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Transactions Module-OUP">
+
+ <listeners>
+     <listener class-name="frameworkListeners.TestListeners" />
+     <listener class-name="frameworkListeners.AnnotationTransformer" />
+ </listeners>
+
+   <!--  <test name="OUP_Expense_Firefox" parallel="methods" thread-count="3">
+        <parameter name="browser" value="firefox" />
+		<parameter name="env" value="https://expense-prep.happay.in" />
+		<classes>
+			<class name="testCases.Expense.CreateExpenseTestOUP">
+				<methods>
+				    <include name="TC001_Expense_CreateExpenseMissingAmountFields" />
+					<include name="TC002_Expense_createExpense_Verify_pending_list" />
+					<include name="TC003_Expense_EditExpenseWithoutSpentAt" />
+					<include name="TC004_Expense_EditExpenseWithoutDescription" />
+					<include name="TC005_CreateExpenseWithNativeFields" />
+                   	<include name="TC006_EditExpenseWithNativeFields" />
+                   	<include name="TC007_DeleteBill" />
+                   	<include name="TC008_Expense_Split" />
+                   	<include name="TC009_Expense_DeleteFromHamburger" />
+					<include name="TC010_Expense_DeleteFromQuickView" />
+                    <include name="TC011_ExportExpense" />
+                    <include name="TC012_MileageExpense" />
+                    <include name="TC013_Expense_ViewExpense" />
+                    <include name="TC014_Expense_MergeExpenseIconinAndMergeExpenseinHamburgerExpenseList" />
+                    <include name="TC015_Expense_AutoMergeExpenseIconinaAndExpenseBillsExpenseList"/>
+                    <include name="TC016_Expense_UnMerge"/>
+                    <include name="TC017_Expense_MergeExpenseWithoutSelectingMergableTransaction"/>
+                    <include name="TC019_Expense_DeleteFromHamburger"/>
+					<include name="TC032_CreateExpenseWithCopyConfigured"/>
+					<include name="TC033_CopyParticularTxnType"/>
+					<include name="TC034_CopyExpensewithoutAmount"/>
+					<include name="TC035_VerifyCopyExpenseTransactionID"/>
+					<include name="TC036_CopyExpenseAddAttachment"/>
+					<include name="TC037_CopyExpenseChangeWalletType"/>
+					<include name="TC038_CopyExpenseEditExpenseType"/>
+					<include name="TC039_createExpenseFromHomeDashboard"/>
+                </methods>
+            </class>
+        </classes>
+    </test> -->
+<!--  parallel="methods" thread-count="5"
+ -->
+ <test name="OUP_Expense_Chrome">
+     <parameter name="browser" value="chrome" />
+     <parameter name="env" value="https://expense.uat.happay.in" />
+     <classes>
+         <class name="testCases.Expense.CreateExpenseTestOUP">
+             <methods>
+                 <!-- <include name="TC001_Expense_CreateExpenseMissingAmountFields" /> -->
+                <!--  <include name="TC002_Expense_createExpense_Verify_pending_list" /> -->
+            <!--      <include name="TC003_Expense_EditExpenseWithoutSpentAt" /> -->
+                <!--  <include name="TC004_Expense_EditExpenseWithoutDescription" /> -->
+                <!--  <include name="TC005_CreateExpenseWithNativeFields" /> -->
+           <!--       <include name="TC006_EditExpenseWithNativeFields" /> -->
+                <!--  <include name="TC007_DeleteBill" />  -->
+                <!--  <include name="TC008_Expense_Split" /> -->
+                <!--  <include name="TC009_Expense_DeleteFromHamburger" />
+                 <include name="TC010_Expense_DeleteFromQuickView" /> -->
+              <!--    <include name="TC011_ExportExpense" /> -->
+               <!--   <include name="TC012_MileageExpense" />
+                 <include name="TC013_Expense_ViewExpense" /> -->
+              <!--    <include name="TC014_Expense_MergeExpenseIconinAndMergeExpenseinHamburgerExpenseList" />
+                 <include name="TC015_Expense_AutoMergeExpenseIconinaAndExpenseBillsExpenseList"/> -->
+<!--                  <include name="TC016_Expense_UnMerge"/>
+                 <include name="TC017_Expense_MergeExpenseWithoutSelectingMergableTransaction"/> -->
+                 <!-- <include name="TC019_Expense_DeleteFromHamburger"/> -->
+                 <include name="TC032_CreateExpenseWithCopyConfigured"/>
+                 <include name="TC033_CopyParticularTxnType"/>
+                 <include name="TC034_CopyExpensewithoutAmount"/>
+                 <include name="TC035_VerifyCopyExpenseTransactionID"/>
+                 <include name="TC036_CopyExpenseAddAttachment"/>
+                 <include name="TC037_CopyExpenseChangeWalletType"/>
+                 <include name="TC038_CopyExpenseEditExpenseType"/>
+                 <include name="TC039_createExpenseFromHomeDashboard"/>
+             </methods>
+         </class>
+     </classes>
+ </test>
+
+	<!--<test name="OUP_Expense_Chrome" parallel="methods" thread-count="5">
+		<parameter name="browser" value="chrome" />
+		<parameter name="env" value="https://expense-prep.happay.in" />
+		<classes>
+			<class name="testCases.Expense.CreateExpenseTestOUP">
+				<methods>
+					<include name="TC001_Expense_CreateExpenseMissingAmountFields" />
+					<include name="TC002_Expense_createExpense_Verify_pending_list" />
+					<include name="TC003_Expense_EditExpenseWithoutSpentAt" />
+					<include name="TC004_Expense_EditExpenseWithoutDescription" />
+					<include name="TC005_CreateExpenseWithNativeFields" />
+					<include name="TC006_EditExpenseWithNativeFields" />
+					<include name="TC007_DeleteBill" />
+					<include name="TC008_Expense_Split" />
+					<include name="TC009_Expense_DeleteFromHamburger" />
+					<include name="TC010_Expense_DeleteFromQuickView" />
+					&lt;!&ndash;<include name="TC011_ExportExpense" />
+					<include name="TC012_MileageExpense" />
+					<include name="TC013_Expense_ViewExpense" />
+					<include name="TC014_Expense_AutoMergeExpenseIconinExpenseList" />
+					<include name="TC015_Expense_VerfiyAutoMergeExpenseDetailsBills"/>
+					<include name="TC016_Expense_VerfiyAutoMergeExpenseDetails"/>
+					<include name="TC017_Expense_UnMerge"/>
+					<include name="TC018_Expense_VerifyBillsAfterUnMerge"/>
+					<include name="TC019_Expense_MergeExpenseIconinExpenseList"/>
+					<include name="TC020_Expense_MergeExpenseIconinHamburger"/>
+					<include name="TC021_Expense_MergeExpenseWithoutSelectingMergableTransaction"/>
+					<include name="TC022_Expense_MergeExpense"/>
+					<include name="TC023_Expense_VerfiyMergeExpenseDetails"/>
+					<include name="TC024_Expense_VerfiyMergeExpenseDetailsBills" />
+					<include name="TC028_Expense_MergeExpensemorethanTwoTransactions" />
+					<include name="TC029_Expense_DeleteFromHamburger"/>&ndash;&gt;
+					<include name="TC032_CreateExpenseWithCopyConfigured"/>
+					<include name="TC033_CopyParticularTxnType"/>
+					<include name="TC034_CopyExpensewithoutAmount"/>
+					<include name="TC035_VerifyCopyExpenseTransactionID"/>
+					<include name="TC036_CopyExpenseAddAttachment"/>
+					<include name="TC037_CopyExpenseChangeWalletType"/>
+					<include name="TC038_CopyExpenseEditExpenseType"/>
+					<include name="TC039_createExpenseFromHomeDashboard"/>
+				</methods>
+			</class>
+
+		</classes>
+	</test>-->
+
+
+
+
+
+
+
+<!-- <test name="Automation_MergeExpense_Chrome" parallel="methods" thread-count="5">-->
+<!-- <parameter name="browser" value="chrome"/>-->
+<!-- <parameter name="env" value="https://expense.happay.in"/>-->
+<!-- <classes>-->
+<!-- <class name="testCases.Expense.MergeExpenseAutomationOrg2">-->
+<!-- <methods>-->
+<!-- &lt;!&ndash; <include name="TC001_Expense_createExpenseformergeDeposit" />-->
+<!-- <include name="TC002_Expense_createExpenseformergeCab" /> &ndash;&gt;-->
+<!-- <include name="TC003_Expense_AutoMergeExpenseIconinExpenseList" />-->
+<!-- <include name="TC004_Expense_VerfiyAutoMergeExpenseDetailsBills"/>-->
+<!-- <include name="TC005_Expense_VerfiyAutoMergeExpenseDetails"/>-->
+<!-- <include name="TC006_Expense_UnMerge"/>-->
+<!-- <include name="TC007_Expense_VerifyBillsAfterUnMerge"/> -->
+<!-- <include name="TC008_Expense_MergeExpenseIconinExpenseList"/>-->
+<!-- <include name="TC009_Expense_MergeExpenseIconinHamburger"/>-->
+<!-- <include name="TC010_Expense_MergeExpenseWithoutSelectingMergableTransaction"/>-->
+<!-- <include name="TC011_Expense_MergeExpense"/>-->
+<!-- <include name="TC012_Expense_VerfiyMergeExpenseDetails" />-->
+<!-- <include name="TC013_Expense_VerfiyMergeExpenseDetailsBills" />-->
+<!-- <include name="TC014_Expense_EditMergeExpenseDetails" />-->
+<!-- <include name="TC015_Expense_createExpenseformerge" />-->
+<!-- <include name="TC016_Expense_VerfiyAutoMergeExpenseDetails" />-->
+<!-- <include name="TC017_Expense_MergeExpensemorethanTwoTransactions" />-->
+<!-- <include name="TC018_Expense_DeleteFromHamburger" /> -->
+<!-- -->
+
+<!-- </methods>-->
+<!-- </class>-->
+<!-- </classes>-->
+<!-- </test>-->
+
+ <!--
+ <test thread-count="1" name="Automation_CopyExpense_Chrome">
+ <parameter name="browser" value="chrome" />
+ <parameter name="env" value="https://expense.happay.in" />
+ <classes>
+ <class name="testCases.Expense.CreateExpenseTest">
+ <methods>
+ <include name="TC020_CreateExpenseWithCopyConfigured"/>
+ <include name="TC021_CopyParticularTxnType"/>
+ <include name="TC022_CopyExpensewithoutAmount"/>
+ <include name="TC023_VerifyCopyExpenseTransactionID"/>
+ <include name="TC024_CopyExpenseAddAttachment"/>
+ <include name="TC025_CopyExpenseChangeWalletType"/>
+ <include name="TC026_CopyExpenseEditExpenseType"/>
+
+ </methods>
+ </class>
+ </classes>
+
+
+</test> -->
+
+</suite> <!-- HATWebFramework Automation Test Suites -->

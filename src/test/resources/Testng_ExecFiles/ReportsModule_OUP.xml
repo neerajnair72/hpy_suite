@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Reports Module-OUP" >
+
+	<listeners>
+		<listener class-name="frameworkListeners.TestListeners" />
+		<listener class-name="frameworkListeners.AnnotationTransformer" />
+	</listeners>
+
+ 	<!-- <test name="OUP_Report_Firefox" parallel="methods" thread-count="3" >
+		<parameter name="browser" value="firefox" />
+		<parameter name="env" value="https://expense-prep.happay.in" />
+		<classes>
+			<class name="testCases.Reports.ReportsModuleTestsOUP">
+				<methods>
+					<include name="TC001_createReportWithoutMandatoryFields" />
+					<include name="TC002_createReport" />
+					<include name="TC003_createReport_Add_ExistingExpense" />
+					<include name="TC008_EditReportRemoveExpense" />
+					<include name="TC004_createReport_AddNewExpense" />
+					<include name="TC005_AddBillExpenseInsideReport" />
+					<include name="TC006_DeleteBillExpenseInsideReport" />
+					<include name="TC007_addEditExpenseInReport" />
+					<include name="TC010_SubmitReport" /> 
+					<include name="TC012_SubmitReport_Noapprover" />
+					<include name="TC013_SubmitWithoutActionManager" /> 
+					<include name="TC014_AcceptActionManager_Report" />
+					 <include name="TC015_SubmitWithoutActionFinance" />
+					<include name="TC016_AcceptHardcopyFinance_Report" />
+					<include name="TC017_AcceptActionFinance_Report" />
+					<include name="TC018_viewNonViolatedReport" />
+					<include name="TC019_downloadExcel" />
+					<include name="TC020_downloadPolicyException" />
+					<include name="TC021_downloadWorkflowComments" />
+					<include name="TC022_DeleteReportQuickView" />
+					<include name="TC023_RecallReport" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+ -->
+	<test name="OUP_Report_Chrome"  parallel="methods" thread-count="5">
+	<parameter name="browser" value="chrome" />
+	<parameter name="env" value="https://expense.uat.happay.in" />
+	<classes>
+		<class name="testCases.Reports.ReportsModuleTestsOUP">
+			<methods>
+				<include name="TC001_createReportWithoutMandatoryFields" />
+				<include name="TC002_createReport" />
+				<include name="TC003_createReport_Add_ExistingExpense" />
+				<include name="TC004_createReport_AddNewExpense" />
+				<include name="TC008_EditReportRemoveExpense" />
+				<include name="TC005_AddBillExpenseInsideReport" />
+				<include name="TC006_DeleteBillExpenseInsideReport" />
+				<include name="TC007_addEditExpenseInReport" />
+				<include name="TC010_SubmitReport" />
+				<include name="TC012_SubmitReport_Noapprover" />
+				<include name="TC013_SubmitWithoutActionManager" />
+				<include name="TC014_AcceptActionManager_Report" />
+				<include name="TC015_SubmitWithoutActionFinance" />
+				<include name="TC016_AcceptHardcopyFinance_Report" />
+				<include name="TC017_AcceptActionFinance_Report" />
+				<include name="TC018_viewNonViolatedReport" />
+				<include name="TC019_downloadExcel" />
+				<include name="TC020_downloadPolicyException" />
+				<include name="TC021_downloadWorkflowComments" />
+				<include name="TC022_DeleteReportQuickView" />
+				<include name="TC023_RecallReport" />
+			</methods>
+		</class>
+	</classes>
+</test>
+
+</suite>
+

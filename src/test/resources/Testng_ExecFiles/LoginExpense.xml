@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Login Module"
+	thread-count="1">
+
+	<listeners>
+		<listener class-name="frameworkListeners.TestListeners" />
+		<listener class-name="frameworkListeners.AnnotationTransformer" />
+	</listeners>
+
+	<test name="LoginTestChrome">
+		<!--        <test name="LoginTestChrome" >-->
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="env" value="https://expense-prep.happay.in" />
+		<classes>
+			<class name="testCases.Login.LoginExpenseTest">
+				<methods>
+					<include name="test001_ExpenseLogin_AsEmployee_HAT01" />
+					<include name="test002_ExpenseLogin_AsManager_HAT02" />
+					<include name="test003_ExpenseLogin_AsEmployee_HAT01" />
+					<include name="test004_ExpenseLogin_AsManager_HAT02" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="LoginTestFirefox">
+		<!--    <test name="LoginTestFirefox">-->
+		<parameter name="browser" value="firefox"></parameter>
+		<parameter name="env" value="https://expense-prep.happay.in" />
+		<classes>
+			<class name="testCases.Login.LoginExpenseTest">
+				<methods>
+					<include name="test001_ExpenseLogin_AsEmployee_HAT01" />
+                    <!--<include name="test002_ExpenseLogin_AsManager_HAT02" />
+					<include name="test003_ExpenseLogin_AsEmployee_HAT01" />
+					<include name="test004_ExpenseLogin_AsManager_HAT02" />-->
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite> <!-- HATWebFramework Automation Test Suites -->

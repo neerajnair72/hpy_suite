@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="26" total="27" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-09-06T13:41:10 IST" name="Transactions Module-OUP" finished-at="2021-09-06T13:43:31 IST" duration-ms="140836">
+    <groups>
+    </groups>
+    <test started-at="2021-09-06T13:41:10 IST" name="OUP_Expense_Chrome" finished-at="2021-09-06T13:43:31 IST" duration-ms="140836">
+      <class name="testCases.Expense.CreateExpenseTestOUP">
+        <test-method is-config="true" signature="globalTestSetup(java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:testCases.Expense.CreateExpenseTestOUP@73c60324]" started-at="2021-09-06T13:41:10 IST" name="globalTestSetup" description="Method level Setup!" finished-at="2021-09-06T13:41:24 IST" duration-ms="13695" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://expense.uat.happay.in]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@472d0f4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- globalTestSetup -->
+        <test-method signature="TC032_CreateExpenseWithCopyConfigured()[pri:32, instance:testCases.Expense.CreateExpenseTestOUP@73c60324]" started-at="2021-09-06T13:41:24 IST" name="TC032_CreateExpenseWithCopyConfigured" description="Create expense with Copy Settings Configured" finished-at="2021-09-06T13:43:31 IST" duration-ms="126478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC032_CreateExpenseWithCopyConfigured -->
+        <test-method is-config="true" signature="globalTearDown()[pri:0, instance:testCases.Expense.CreateExpenseTestOUP@73c60324]" started-at="2021-09-06T13:43:31 IST" name="globalTearDown" description="Method Level Teardown!" finished-at="2021-09-06T13:43:31 IST" duration-ms="439" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- globalTearDown -->
+        <test-method is-config="true" signature="terminate()[pri:0, instance:testCases.Expense.CreateExpenseTestOUP@73c60324]" started-at="2021-09-06T13:43:31 IST" name="terminate" finished-at="2021-09-06T13:43:31 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminate -->
+      </class> <!-- testCases.Expense.CreateExpenseTestOUP -->
+    </test> <!-- OUP_Expense_Chrome -->
+  </suite> <!-- Transactions Module-OUP -->
+</testng-results>

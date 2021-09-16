@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HAT Automation Product Test Suites">
+	<!-- suite name="Suite Name" -->
+	<listeners>
+		<listener class-name="frameworkListeners.TestListeners" />
+		<listener class-name="frameworkListeners.AnnotationTransformer" />
+
+	</listeners>
+
+	<suite-files>
+
+<!-- 		<suite-file path="src/test/resources/Testng_ExecFiles/testngTravel.xml" /> 
+ --> 
+
+ 
+	    <suite-file path="src/test/resources/Testng_ExecFiles/JenkinsTestExec.xml" />
+	    
+<!--<suite-file path="src/test/resources/Testng_ExecFiles/testngAutomationOrg.xml" /> -->
+  		 
+     
+		
+
+	</suite-files>
+</suite> <!-- HATWebFramework Automation Test Suites -->
+ 

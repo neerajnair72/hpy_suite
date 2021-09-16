@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TRF Module" parallel="methods"
+	thread-count="1">
+
+	<listeners>
+		<listener class-name="frameworkListeners.TestListeners"/>
+		<listener class-name="frameworkListeners.AnnotationTransformer" />
+	</listeners>
+
+<test name="OUP_TRF_Firefox" parallel="methods" thread-count="5">
+	<parameter name="browser" value="chrome" />
+	<parameter name="env" value="https://expense.uat.happay.in" />
+	<classes>
+		<class name="testCases.TRF.TRF_TestcasesOUP">
+			<methods>
+
+				<include name="Test001_TRFCreation" />
+				<include name="Test002_TRFVerifyPendingList" />
+				<include name="Test004_TripEdit" />
+				<include name="Test005_TripDelete" />
+				<include name="Test006_SubmitTRF" />
+				<include name="Test006_SaveTRF" />
+				<include name="Test012_TRFDelete" />
+				<exclude name="Test013_ViolatedTRF" />
+				<exclude name="Test014_NotViolatedTRF" />
+				<include name="Test015_TRFExport" />
+				<include name="Test016_downloadPolicyException" />
+				<include name="Test017_downloadWorkflowComments" />
+
+			</methods>
+		</class>
+	</classes>
+</test>
+
+	<!-- <test thread-count="1"
+		name="OUP_TRF_Chrome">
+		<parameter name="browser" value="chrome" />
+		<parameter name="env" value="https://expense-prep.happay.in" />
+		<classes>
+			<class name="testCases.TRF.TRF_TestcasesOUP" />
+		</classes>
+	</test> -->
+
+</suite> 

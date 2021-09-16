@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Transactions Module-OUP">
+
+ <listeners>
+     <listener class-name="frameworkListeners.TestListeners" />
+     <listener class-name="frameworkListeners.AnnotationTransformer" />
+ </listeners>
+  <test name="OUP_Expense_Firefox" parallel="methods" thread-count="5">
+        <parameter name="browser" value="chrome" />
+		<parameter name="env" value="https://expense.uat.happay.in" />
+		<classes>
+			<class name="testCases.Expense.MergeExpenseAutomationOrg">
+				<methods>
+				    <include name="TC001_Expense_createExpenseformergeDeposit"></include>
+				    <include name="TC002_Expense_createExpenseformergeCab"></include>
+				    <include name="TC003_Expense_AutoMergeExpenseIconinExpenseList"></include>
+				    <include name="TC004_Expense_VerfiyAutoMergeExpenseDetailsBills"></include>
+				    <include name="TC005_Expense_VerfiyAutoMergeExpenseDetails"></include>
+				    <include name="TC006_Expense_UnMerge"></include>
+				    <include name="TC007_Expense_VerifyBillsAfterUnMerge"></include>
+				    <include name="TC008_Expense_MergeExpenseIconinExpenseList"></include>
+				    <include name="TC009_Expense_MergeExpenseIconinHamburger"></include>
+				    <include name="TC010_Expense_MergeExpenseWithoutSelectingMergableTransaction"></include>
+				    <include name="TC011_Expense_MergeExpense"></include>
+				    <include name="TC012_Expense_VerfiyMergeExpenseDetails"></include>
+				    <include name="TC013_Expense_VerfiyMergeExpenseDetailsBills"></include>
+				    <include name="TC014_Expense_EditMergeExpenseDetails"></include>
+				    <include name="TC015_Expense_createExpenseformerge"></include>
+				    <include name="TC016_Expense_VerfiyAutoMergeExpenseDetails"></include>
+				    <include name="TC017_Expense_MergeExpensemorethanTwoTransactions"></include>
+				    <include name="TC018_Expense_DeleteFromHamburger"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+ 
+ </suite>

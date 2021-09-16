@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Travel FLight Module]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="frameworkListeners.TestListeners"/>
+    <listener class-name="frameworkListeners.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="2" parallel="methods" name="LoginTestChrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="env" value="https://expense.uat.happay.in"/>
+    <classes>
+      <class name="testCases.MoneyRequest.MoneyRequestCreateOUP">
+        <methods>
+          <include name="TC003_CreateMoneyrequestAndCaptureMrID"/>
+          <include name="TC007_PartApproveMoneyrequest"/>
+          <include name="TC023_recallbuttonCheckForVerifiedMR"/>
+          <include name="TC009_MoneyrequestFromHome"/>
+          <include name="TC026_requestedAmountEditByFinance"/>
+          <include name="globalTearDown"/>
+          <include name="TC005_VerifyMoneyrequest"/>
+          <include name="TC006_CreateMoneyrequestWithBill"/>
+          <include name="globalTestSetup"/>
+          <include name="TC016_MRPDFDownloadWithInvoices"/>
+          <include name="TC012_ApproveMoneyrequest"/>
+          <include name="TC024_resubmitRecalledMR"/>
+          <include name="TC022_ResubmitMRDeclinedByFinance"/>
+          <include name="terminate"/>
+          <include name="TC001_MoneyrequestWithoutMandatoryfields"/>
+          <include name="TC025_recallAndResubmitApproveddMR"/>
+          <include name="TC010_DeclineMoneyrequestManager"/>
+          <include name="TC017_MRPDFDownloadWithoutInvoices"/>
+          <include name="TC002_MoneyrequestHavingNoapprover"/>
+        </methods>
+      </class> <!-- testCases.MoneyRequest.MoneyRequestCreateOUP -->
+      <class name="testCases.Reports.ReportsModuleTestsOUP">
+        <methods>
+          <include name="TC003_createReport_Add_ExistingExpense"/>
+          <include name="TC021_downloadWorkflowComments"/>
+          <include name="TC004_createReport_AddNewExpense"/>
+          <include name="TC007_addEditExpenseInReport"/>
+          <include name="TC016_AcceptHardcopyFinance_Report"/>
+          <include name="TC023_RecallReport"/>
+          <include name="TC014_AcceptActionManager_Report"/>
+          <include name="globalTearDown"/>
+          <include name="TC006_DeleteBillExpenseInsideReport"/>
+          <include name="Preconditions"/>
+          <include name="globalTestSetup"/>
+          <include name="TC005_AddBillExpenseInsideReport"/>
+          <include name="TC017_AcceptActionFinance_Report"/>
+          <include name="TC018_viewNonViolatedReport"/>
+          <include name="TC008_EditReportRemoveExpense"/>
+          <include name="TC002_createReport"/>
+          <include name="terminate"/>
+          <include name="TC020_downloadPolicyException"/>
+          <include name="TC019_downloadExcel"/>
+          <include name="TC022_DeleteReportQuickView"/>
+        </methods>
+      </class> <!-- testCases.Reports.ReportsModuleTestsOUP -->
+      <class name="testCases.Expense.MergeExpenseAutomationOrg">
+        <methods>
+          <include name="TC011_Expense_MergeExpense"/>
+          <include name="TC009_Expense_MergeExpenseIconinHamburger"/>
+          <include name="TC013_Expense_VerfiyMergeExpenseDetailsBills"/>
+          <include name="TC002_Expense_createExpenseformergeCab"/>
+          <include name="TC010_Expense_MergeExpenseWithoutSelectingMergableTransaction"/>
+          <include name="TC014_Expense_EditMergeExpenseDetails"/>
+          <include name="globalTearDown"/>
+          <include name="TC005_Expense_VerfiyAutoMergeExpenseDetails"/>
+          <include name="TC015_Expense_createExpenseformerge"/>
+          <include name="TC016_Expense_VerfiyAutoMergeExpenseDetails"/>
+          <include name="TC018_Expense_DeleteFromHamburger"/>
+          <include name="globalTestSetup"/>
+          <include name="TC012_Expense_VerfiyMergeExpenseDetails"/>
+          <include name="TC004_Expense_VerfiyAutoMergeExpenseDetailsBills"/>
+          <include name="TC017_Expense_MergeExpensemorethanTwoTransactions"/>
+          <include name="TC007_Expense_VerifyBillsAfterUnMerge"/>
+          <include name="TC006_Expense_UnMerge"/>
+          <include name="terminate"/>
+          <include name="TC008_Expense_MergeExpenseIconinExpenseList"/>
+          <include name="TC003_Expense_AutoMergeExpenseIconinExpenseList"/>
+        </methods>
+      </class> <!-- testCases.Expense.MergeExpenseAutomationOrg -->
+      <class name="testCases.Expense.CreateExpenseTestOUP">
+        <methods>
+          <include name="TC003_Expense_EditExpenseWithoutSpentAt"/>
+          <include name="TC039_createExpenseFromHomeDashboard"/>
+          <include name="globalTearDown"/>
+          <include name="TC016_Expense_UnMerge"/>
+          <include name="TC011_ExportExpense"/>
+          <include name="TC034_CopyExpensewithoutAmount"/>
+          <include name="globalTestSetup"/>
+          <include name="TC019_Expense_DeleteFromHamburger"/>
+          <include name="TC005_CreateExpenseWithNativeFields"/>
+          <include name="TC015_Expense_AutoMergeExpenseIconinaAndExpenseBillsExpenseList"/>
+          <include name="TC035_VerifyCopyExpenseTransactionID"/>
+          <include name="TC008_Expense_Split"/>
+          <include name="TC010_Expense_DeleteFromQuickView"/>
+          <include name="TC032_CreateExpenseWithCopyConfigured"/>
+          <include name="TC017_Expense_MergeExpenseWithoutSelectingMergableTransaction"/>
+          <include name="TC007_DeleteBill"/>
+          <include name="TC027_Expense_EditMergeExpenseDetails"/>
+          <include name="TC037_CopyExpenseChangeWalletType"/>
+          <include name="TC033_CopyParticularTxnType"/>
+          <include name="TC012_MileageExpense"/>
+          <include name="TC014_Expense_MergeExpenseIconinAndMergeExpenseinHamburgerExpenseList"/>
+          <include name="TC009_Expense_DeleteFromHamburger"/>
+          <include name="TC036_CopyExpenseAddAttachment"/>
+          <include name="TC038_CopyExpenseEditExpenseType"/>
+          <include name="terminate"/>
+          <include name="TC006_EditExpenseWithNativeFields"/>
+          <include name="TC013_Expense_ViewExpense"/>
+          <include name="TC004_Expense_EditExpenseWithoutDescription"/>
+        </methods>
+      </class> <!-- testCases.Expense.CreateExpenseTestOUP -->
+      <class name="testCases.TRF.TRF_TestcasesOUP">
+        <methods>
+          <include name="Test006_SaveTRF"/>
+          <include name="Test014_NotViolatedTRF"/>
+          <include name="Test002_TRFVerifyPendingList"/>
+          <include name="globalTearDown"/>
+          <include name="Test005_TripDelete"/>
+          <include name="Test006_SubmitTRF"/>
+          <include name="Test013_ViolatedTRF"/>
+          <include name="globalTestSetup"/>
+          <include name="Test004_TripEdit"/>
+          <include name="Test015_TRFExport"/>
+          <include name="Test001_TRFCreation"/>
+          <include name="Test012_TRFDelete"/>
+          <include name="terminate"/>
+          <include name="Test016_downloadPolicyException"/>
+          <include name="Test017_downloadWorkflowComments"/>
+        </methods>
+      </class> <!-- testCases.TRF.TRF_TestcasesOUP -->
+    </classes>
+  </test> <!-- LoginTestChrome(failed) -->
+</suite> <!-- Failed suite [Travel FLight Module] -->
