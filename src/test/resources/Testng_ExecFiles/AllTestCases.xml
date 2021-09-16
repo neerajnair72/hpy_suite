@@ -10,7 +10,7 @@
 	</listeners>
 
 
-	<test name="LoginTestChrome" parallel="methods" thread-count="5">
+	<test name="LoginTestChrome" parallel="methods" thread-count="15">
 		<parameter name="browser" value="chrome"></parameter>
 		<parameter name="env" value="https://expense.uat.happay.in" />
 		<classes>
