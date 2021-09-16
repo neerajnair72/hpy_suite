@@ -80,7 +80,7 @@ public class TestBotBase {
 		String imageList[] = {"1.png", "MRID.txt", "CopyTypeTxnID.txt", "TxnID.txt"};
 		
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-    	capabilities.setCapability("build", "5 parallels timing");
+    	capabilities.setCapability("build", "15 parallels timing + Jenkins ");
     	capabilities.setCapability("name", "8 TC on Mac/Chrom 92.v");
     	capabilities.setCapability("platform", "MacOS Big sur");
     	capabilities.setCapability("browserName", "Chrome");
